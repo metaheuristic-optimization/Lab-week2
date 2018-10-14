@@ -1,5 +1,4 @@
 #!/usr/bin/python
-
 import sys
 
 dataset = sys.argv[1]
@@ -15,4 +14,15 @@ print("Total cities: ", total)
 
 lines.pop(0)
 
-print(lines)
+cities = {}
+
+for x in lines:
+    line = x.split(' ')
+    if len(line) == 3:
+        print(line)
+        cities[line[0]] = {
+        'lat': line[1],
+               'lng': line[2]
+        }
+
+print(cities)
