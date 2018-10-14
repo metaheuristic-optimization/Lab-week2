@@ -3,6 +3,16 @@
 import sys
 
 dataset = sys.argv[1]
-datasetPath = 'dataset/' + dataset
+datasetPath = './dataset/' + dataset
 
-print(datasetPath)
+print('Reading dataset: ', datasetPath)
+
+lines = open(datasetPath).read().split("\n")
+
+total = lines[0]
+
+print("Total cities: ", total)
+
+lines.pop(0)
+
+print(lines)
